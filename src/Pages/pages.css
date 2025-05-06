@@ -1,7 +1,7 @@
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #00ff00;
+  color: #000000;
   border-bottom: 3px solid #129b00;
   padding-bottom: 0.5rem;
   display: inline-block;
@@ -13,7 +13,7 @@
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: #2d3748;
+  color: #000000;
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -65,14 +65,14 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #009908;
+  color: #00f30c;
   word-wrap: break-word;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #000000;
+  color: #ffffff;
 }
 
 .hero-buttons {
@@ -166,14 +166,14 @@
 .about-heading {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #035c03;
+  color: #00ff00;
 }
 
 .about-page {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #ffffff57;
   border-radius: 35px;
 }
 
@@ -181,7 +181,7 @@
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 1.25rem;
-  color: #4a5568;
+  color: #000000;
 }
 
 /* Skills Section */
@@ -203,7 +203,7 @@
 .category-title {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #2d3748;
+  color: #000000;
 }
 
 .skills-list {
@@ -220,7 +220,7 @@
 
 .skill-name {
   font-weight: 500;
-  color: #4a5568;
+  color: #000000;
 }
 
 .skill-bar {
