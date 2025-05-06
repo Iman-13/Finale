@@ -1,0 +1,188 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('../public/peek.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background fixed when scrolling */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Dark overlay for the background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.377);
+  z-index: -1;
+  position: fixed; /* Fixed position for consistent overlay */
+}
+
+/* Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  text-align: center; /* Ensures text is centered in button */
+}
+
+.btn-primary {
+  background-color: #007022;
+  color: rgb(248, 248, 248);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #06a706;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #eeeeee;
+  border: 2px solid #048d04;
+}
+
+.btn-outline:hover {
+  background-color: #078a07;
+  color: white;
+}
+
+/* Page Titles */
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff; /* Changed to white for better visibility */
+  padding-bottom: 0.5rem;
+  word-wrap: break-word; /* Prevents text overflow on small screens */
+}
+
+/* Section Description */
+.section-description {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Responsive Design */
+/* Large screens (default) */
+@media (min-width: 1201px) {
+  .content {
+    padding: 3rem;
+  }
+}
+
+/* Medium-sized screens */
+@media (max-width: 1200px) {
+  .content {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  
+  .page-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .content {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 320px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .content {
+    padding: 0.75rem;
+  }
+}
+
+/* Fix for iOS devices to handle the background properly */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+}

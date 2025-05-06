@@ -1,0 +1,363 @@
+/* Improved Navbar Styles */
+.navbar {
+  background: linear-gradient(135deg, #0a2e1a, #005315);
+  padding: 1rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link:hover {
+  color: #4eff91;
+  transform: translateY(-2px);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #4eff91, #00f134);
+  border-radius: 3px 3px 0 0;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.menu-icon {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:before,
+.menu-icon:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:before {
+  transform: translateY(-8px);
+}
+
+.menu-icon:after {
+  transform: translateY(8px);
+}
+
+.menu-icon.open {
+  background-color: transparent;
+}
+
+.menu-icon.open:before {
+  transform: rotate(45deg);
+}
+
+.menu-icon.open:after {
+  transform: rotate(-45deg);
+}
+
+/* Improved Footer Styles */
+.footer {
+  background: linear-gradient(to bottom, #0a4420, #062712);
+  color: #a0aec0;
+  padding: 4rem 0 1.5rem;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #4eff91, #00f134);
+  border-radius: 2px;
+}
+
+.footer-subtitle {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-subtitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #4eff91, #00f134);
+  border-radius: 2px;
+}
+
+.footer-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-links li:hover {
+  transform: translateX(5px);
+}
+
+.footer-link {
+  color: #a0aec0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.3rem 0;
+}
+
+.footer-link:hover {
+  color: #4eff91;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-link {
+  color: #a0aec0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.social-link:hover {
+  color: #4eff91;
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a2e1a, #062712);
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transition: all 0.4s ease;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    gap: 1.5rem;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nav-link.active::after {
+    bottom: 5px;
+    width: 50%;
+    left: 25%;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Scroll Animation */
+.navbar.scrolled {
+  background: rgba(10, 46, 26, 0.95);
+  padding: 0.7rem 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Button Styles */
+.contact-button {
+  background: linear-gradient(90deg, #00f134, #4eff91);
+  color: #0a2e1a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 241, 52, 0.3);
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 241, 52, 0.4);
+}
+
+/* Newsletter Form Styles */
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+  max-width: 100%;
+}
+
+.newsletter-input {
+  padding: 0.8rem 1rem;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 70%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-button {
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(90deg, #00f134, #4eff91);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #0a2e1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background: linear-gradient(90deg, #4eff91, #00f134);
+}
