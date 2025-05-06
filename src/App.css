@@ -25,7 +25,7 @@ body::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.377);
   z-index: -1;
-  position: fixed; 
+  position: fixed;
 }
 
 .App {
@@ -55,7 +55,7 @@ body::before {
   text-decoration: none;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  text-align: center; 
+  text-align: center;
 }
 
 .btn-primary {
@@ -82,7 +82,7 @@ body::before {
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #00ff0d; 
+  color: #00ff0d;
   padding-bottom: 0.5rem;
   word-wrap: break-word;
 }
@@ -92,21 +92,13 @@ body::before {
   color: #ffffff;
   margin-bottom: 2rem;
   max-width: 800px;
-  line-height: 1.6; 
+  line-height: 1.6;
 }
 
-/* Responsive Design */
-@media (min-width: 1201px) {
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
   .content {
-    padding: 3rem;
-  }
-}
-
-/* Medium-sized screens */
-@media (max-width: 1200px) {
-  .content {
-    padding: 2rem;
-    max-width: 90%;
+    padding: 1.5rem;
   }
   
   .page-title {
@@ -114,15 +106,17 @@ body::before {
   }
 }
 
-/* Tablets */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  body {
+    background-position: center top; /* Adjust background position for medium screens */
+  }
+  
   .content {
-    padding: 1.5rem;
-    max-width: 95%;
+    padding: 1.2rem;
   }
   
   .page-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .section-description {
@@ -131,49 +125,28 @@ body::before {
   
   .btn {
     padding: 0.5rem 1rem;
-    margin-right: 0.75rem;
-    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    display: block;
+    margin-right: 0;
+    width: 100%;
+    max-width: 250px;
   }
 }
 
-/* Mobile phones */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+  body {
+    background-size: 200% auto; /* Make the background larger on small screens */
+  }
+  
   .content {
     padding: 1rem;
-    max-width: 100%;
   }
   
-  .page-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .section-description {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .btn {
-    display: block;
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-}
-
-/* For very small screens */
-@media (max-width: 320px) {
   .page-title {
     font-size: 1.5rem;
   }
   
-  .content {
-    padding: 0.75rem;
-  }
-}
-
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
+  .section-description {
+    font-size: 0.9rem;
   }
 }

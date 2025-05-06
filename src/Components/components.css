@@ -1,3 +1,4 @@
+/* Responsive Navbar */
 .navbar {
   background: linear-gradient(135deg, #0a2e1a, #005315);
   padding: 1rem 0;
@@ -6,6 +7,7 @@
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .navbar-container {
@@ -14,11 +16,12 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .navbar-logo {
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -38,7 +41,7 @@
 
 .nav-links {
   display: flex;
-  gap: 1.8rem;
+  gap: clamp(1rem, 2vw, 1.8rem);
   align-items: center;
 }
 
@@ -50,6 +53,7 @@
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .nav-link:hover {
@@ -122,17 +126,20 @@
   transform: rotate(-45deg);
 }
 
+/* Responsive Footer */
 .footer {
   background: linear-gradient(to bottom, #0a4420, #062712);
   color: #a0aec0;
   padding: 4rem 0 1.5rem;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  width: 100%;
 }
 
 .footer-content {
@@ -140,16 +147,18 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
   margin-bottom: 3rem;
+  width: 100%;
 }
 
 .footer-section {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .footer-title {
   color: white;
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
@@ -168,7 +177,7 @@
 
 .footer-subtitle {
   color: white;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
   margin-bottom: 1.2rem;
   position: relative;
   display: inline-block;
@@ -194,6 +203,8 @@
 .footer-links {
   list-style: none;
   padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .footer-links li {
@@ -221,6 +232,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .social-link {
@@ -248,12 +261,103 @@
   padding-top: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.9rem;
+  width: 100%;
 }
 
+.navbar.scrolled {
+  background: rgba(10, 46, 26, 0.95);
+  padding: 0.7rem 0;
+  backdrop-filter: blur(10px);
+}
+
+.contact-button {
+  background: linear-gradient(90deg, #00f134, #4eff91);
+  color: #0a2e1a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 241, 52, 0.3);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 241, 52, 0.4);
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 1rem;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.newsletter-input {
+  padding: 0.8rem 1rem;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  width: 70%;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.newsletter-input:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-button {
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(90deg, #00f134, #4eff91);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #0a2e1a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletter-button:hover {
+  background: linear-gradient(90deg, #4eff91, #00f134);
+}
+
+/* Overlay for mobile menu */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+}
 
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0 1.5rem;
+    padding: 0 1rem;
   }
 
   .mobile-menu-btn {
@@ -268,11 +372,12 @@
     height: 100vh;
     background: linear-gradient(135deg, #0a2e1a, #062712);
     flex-direction: column;
-    padding: 6rem 2rem 2rem;
+    padding: 5rem 1.5rem 2rem;
     transition: all 0.4s ease;
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     gap: 1.5rem;
+    overflow-y: auto;
   }
 
   .nav-links.active {
@@ -295,64 +400,58 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+  
+  /* Prevent scrolling when mobile menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
 }
 
-.navbar.scrolled {
-  background: rgba(10, 46, 26, 0.95);
-  padding: 0.7rem 0;
-  backdrop-filter: blur(10px);
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 0.8rem;
+  }
+  
+  .nav-links {
+    width: 85%;
+    padding: 5rem 1rem 2rem;
+  }
+  
+  .footer {
+    padding: 3rem 0 1rem;
+  }
+  
+  .footer-container {
+    padding: 0 0.8rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .newsletter-input {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .newsletter-button {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .social-links {
+    gap: 0.8rem;
+  }
+  
+  .contact-button {
+    padding: 0.5rem 1rem;
+  }
 }
 
-.contact-button {
-  background: linear-gradient(90deg, #00f134, #4eff91);
-  color: #0a2e1a;
-  padding: 0.6rem 1.2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 241, 52, 0.3);
-}
-
-.contact-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 241, 52, 0.4);
-}
-
-.newsletter-form {
-  display: flex;
-  margin-top: 1rem;
-  max-width: 100%;
-}
-
-.newsletter-input {
-  padding: 0.8rem 1rem;
-  border-radius: 4px 0 0 4px;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  width: 70%;
-  outline: none;
-  transition: all 0.3s ease;
-}
-
-.newsletter-input:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-.newsletter-button {
-  padding: 0.8rem 1.2rem;
-  background: linear-gradient(90deg, #00f134, #4eff91);
-  border: none;
-  border-radius: 0 4px 4px 0;
-  color: #0a2e1a;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.newsletter-button:hover {
-  background: linear-gradient(90deg, #4eff91, #00f134);
+/* Fix for Safari mobile menu height issue */
+@supports (-webkit-touch-callout: none) {
+  .nav-links {
+    height: -webkit-fill-available;
+  }
 }
