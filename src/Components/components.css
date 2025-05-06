@@ -1,4 +1,3 @@
-/* Improved Navbar Styles */
 .navbar {
   background: linear-gradient(135deg, #0a2e1a, #005315);
   padding: 1rem 0;
@@ -123,7 +122,6 @@
   transform: rotate(-45deg);
 }
 
-/* Improved Footer Styles */
 .footer {
   background: linear-gradient(to bottom, #0a4420, #062712);
   color: #a0aec0;
@@ -252,7 +250,7 @@
   font-size: 0.9rem;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 1.5rem;
@@ -299,14 +297,12 @@
   }
 }
 
-/* Scroll Animation */
 .navbar.scrolled {
   background: rgba(10, 46, 26, 0.95);
   padding: 0.7rem 0;
   backdrop-filter: blur(10px);
 }
 
-/* Button Styles */
 .contact-button {
   background: linear-gradient(90deg, #00f134, #4eff91);
   color: #0a2e1a;
@@ -325,7 +321,6 @@
   box-shadow: 0 6px 15px rgba(0, 241, 52, 0.4);
 }
 
-/* Newsletter Form Styles */
 .newsletter-form {
   display: flex;
   margin-top: 1rem;

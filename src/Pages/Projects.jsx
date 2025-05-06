@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./pages.css"; // Keeping your original CSS file
+import "./pages.css";
 
 const Projects = () => {
   const [filter, setFilter] = useState("all");
@@ -66,7 +66,6 @@ const Projects = () => {
       <div className="projects-grid">
         {filteredProjects.map(project => (
           <div className="project-card" key={project.id}>
-            {/* Image section removed */}
             <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
             <div className="tech-stack">

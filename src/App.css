@@ -1,4 +1,3 @@
-/* General Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,14 +9,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed; /* Keeps background fixed when scrolling */
+  background-attachment: fixed;
   min-height: 100vh;
   font-family: Arial, sans-serif;
   position: relative;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
-/* Dark overlay for the background */
 body::before {
   content: "";
   position: absolute;
@@ -27,10 +25,9 @@ body::before {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.377);
   z-index: -1;
-  position: fixed; /* Fixed position for consistent overlay */
+  position: fixed; 
 }
 
-/* Layout */
 .App {
   display: flex;
   flex-direction: column;
@@ -40,7 +37,6 @@ body::before {
   width: 100%;
 }
 
-/* Main Content */
 .content {
   flex: 1;
   padding: 2rem;
@@ -49,7 +45,6 @@ body::before {
   width: 100%;
 }
 
-/* Button Styles */
 .btn {
   display: inline-block;
   padding: 0.6rem 1.2rem;
@@ -60,7 +55,7 @@ body::before {
   text-decoration: none;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  text-align: center; /* Ensures text is centered in button */
+  text-align: center; 
 }
 
 .btn-primary {
@@ -84,26 +79,23 @@ body::before {
   color: white;
 }
 
-/* Page Titles */
 .page-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #ffffff; /* Changed to white for better visibility */
+  color: #2feb09; 
   padding-bottom: 0.5rem;
-  word-wrap: break-word; /* Prevents text overflow on small screens */
+  word-wrap: break-word;
 }
 
-/* Section Description */
 .section-description {
   font-size: 1.1rem;
   color: #ffffff;
   margin-bottom: 2rem;
   max-width: 800px;
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6; 
 }
 
 /* Responsive Design */
-/* Large screens (default) */
 @media (min-width: 1201px) {
   .content {
     padding: 3rem;
@@ -180,7 +172,6 @@ body::before {
   }
 }
 
-/* Fix for iOS devices to handle the background properly */
 @supports (-webkit-touch-callout: none) {
   body {
     background-attachment: scroll;

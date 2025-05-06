@@ -6,7 +6,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -18,7 +17,6 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     
-    // Clean up the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -37,7 +35,6 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Mobile menu button */}
         <button 
           className="mobile-menu-btn" 
           onClick={toggleMenu}
@@ -46,7 +43,6 @@ const Navbar = () => {
           <span className={`menu-icon ${isMenuOpen ? "open" : ""}`}></span>
         </button>
 
-        {/* Navigation links */}
         <nav className={`nav-links ${isMenuOpen ? "active" : ""}`}>
           <NavLink
             to="/"

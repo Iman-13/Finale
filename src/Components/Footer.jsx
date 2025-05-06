@@ -7,7 +7,6 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle newsletter subscription
     alert(`Thank you for subscribing with: ${email}`);
     setEmail("");
   };

@@ -14,14 +14,14 @@ const Contact = () => {
             <div className="contact-item">
               <span className="contact-icon">📧</span>
               <div className="contact-text">
-                <h3>Email</h3>
+                <h3>Email:</h3>
                 <p>iman@example.com</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <div className="contact-text">
-                <h3>Location</h3>
+                <h3>Location:</h3>
                 <p>Lucena City, Quezon Province</p>
               </div>
             </div>
@@ -29,18 +29,18 @@ const Contact = () => {
         </div>
 
         <div className="contact-form-container">
-          <h2 className="form-title">Send a Message</h2>
+          <h2 className="form-title">Send a Message:</h2>
           <form className="contact-form">
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">Name:</label>
               <input type="text" id="name" placeholder="Your name" />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">Email:</label>
               <input type="email" id="email" placeholder="Your email" />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">Message:</label>
               <textarea id="message" rows="4" placeholder="Your message"></textarea>
             </div>
             <button type="submit" className="submit-btn">Send</button>
