@@ -14,9 +14,9 @@ const Home = () => {
             <Link to="/contact" className="btn btn-outline">Contact Me</Link>
           </div>
         </div>
-
+        
         <div className="hero-image">
-        <img src="me.jpg" alt="Iman" className="hero-photo" />
+          <img src="me.jpg" alt="Iman" className="hero-photo" />
         </div>
       </section>
     </div>

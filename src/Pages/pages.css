@@ -99,7 +99,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 2rem;
 }
 
 .hero-image-placeholder {
@@ -169,6 +168,40 @@ body {
   object-fit: cover;
   border: 3px solid #00ff88;
   box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+}
+
+/* Responsive layout for small and medium screens */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1; /* This moves the image to appear before the content */
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+
+  .hero-photo {
+    width: min(300px, 90%);
+    height: min(300px, 90vw);
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-photo {
+    width: min(250px, 85%);
+    height: min(250px, 85vw);
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+  }
 }
 
 .about-text {
